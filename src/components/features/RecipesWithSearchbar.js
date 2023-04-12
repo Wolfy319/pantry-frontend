@@ -18,11 +18,11 @@ export default () => {
     }, [])
 
     useEffect(() => {
-        console.log(url)
+        console.log(
         getRecipes(url).then((result) => {
             setRecipes(result);
             setLoading(false);
-        })
+        }))
     }, [url])
 
     const loadRecipes = (selectedIngredients, filter = loadedFilter, writeUrl = true) => {
